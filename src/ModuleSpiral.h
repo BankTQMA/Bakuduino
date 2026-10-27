@@ -1,10 +1,10 @@
-const char* TITLE_1   = "  SIMON SAYS";
+const char* TITLE_1   = "   SIMON SAYS";
 const char* TITLE_2   = " PRESS ANY KEY";
-const char* WIN_1     = "   DEFUSED!";
+const char* WIN_1     = "    DEFUSED!";
 const char* WIN_2     = "SIGNAL RECOVERED";
 const char* LOSE_1    = "  *** BOOM ***";
 const char* LOSE_X    = "TOO MANY ERRORS";
-const char* LOSE_TIME = "TIME'S UP";
+const char* LOSE_TIME = "   TIME'S  UP";
 
 byte spiralIcon[8] = {B11111, B00001, B11101, B10101, B10001, B11111, B00000, B00000};
 
