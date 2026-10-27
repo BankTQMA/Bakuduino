@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>วิธีเล่น - Bakuduino — Simon Says</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Bakuduino — Simon Says</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">รายงานโครงงาน</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../development/" class="nav-link">การพัฒนาและข้อจำกัด</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../credits/" class="nav-link">สมาชิกและหน้าที่</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">วิธีเล่น</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../hardware/" class="nav-link">เครื่องต้นแบบและวงจร</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">โปรแกรมและการติดตั้ง</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../software/" class="dropdown-item">โครงสร้างโปรแกรม</a>
+</li>
+                                    
+<li>
+    <a href="../installation/" class="dropdown-item">ติดตั้งและอัปโหลด</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">คู่มือถอดรหัส</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../manual/" class="dropdown-item">ภาพรวม</a>
+</li>
+                                    
+<li>
+    <a href="../manual/wave/" class="dropdown-item">คลื่น</a>
+</li>
+                                    
+<li>
+    <a href="../manual/eye/" class="dropdown-item">ดวงตา</a>
+</li>
+                                    
+<li>
+    <a href="../manual/fang/" class="dropdown-item">เขี้ยว</a>
+</li>
+                                    
+<li>
+    <a href="../manual/spiral/" class="dropdown-item">เกลียว</a>
+</li>
+                                    
+<li>
+    <a href="../manual/star/" class="dropdown-item">ดาว</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../credits/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../hardware/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/BankTQMA/Bakuduino/edit/master/docs/how-to-play.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link">วิธีเล่น</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">แบ่งบทบาท</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">เป้าหมายและเงื่อนไขจบเกม</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_4" class="nav-link">อ่านหน้าจอ</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_5" class="nav-link">ฟังเสียงและเสียงหลอก</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_6" class="nav-link">เล่นหนึ่งด่านตามลำดับนี้</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_7" class="nav-link">เล่นซ้ำกับกดผิดต่างกันอย่างไร</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">วิธีเล่น</h1>
+<p>Bakuduino เล่นแบบร่วมมือกัน ผู้เล่นต้องแบ่งข้อมูลกันคนละครึ่ง: คนหนึ่งเห็นเครื่อง อีกคนมีคู่มือ คุยกันได้ แต่คนถือคู่มือไม่ควรมองเครื่อง ส่วนคนหน้าเครื่องไม่ควรเปิดดูหน้าคำตอบ</p>
+<h2 id="_2">แบ่งบทบาท</h2>
+<table>
+<thead>
+<tr>
+<th>ผู้ควบคุมเครื่อง</th>
+<th>ผู้เชี่ยวชาญ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>อยู่หน้าอุปกรณ์ ดูจอ ฟังเสียง และกดปุ่ม</td>
+<td>ถือคู่มือ ฟังคำอธิบาย จดเสียง และถอดรหัส</td>
+</tr>
+<tr>
+<td>บอกสัญลักษณ์ ด่าน ลำดับเสียง และเสียงที่มีติ๊ก</td>
+<td>ทวนข้อมูล เลือกกฎ แล้วบอกเลขปุ่มตามลำดับ</td>
+</tr>
+<tr>
+<td>แจ้งเมื่อกดผิด เครื่องเล่นซ้ำ หรือผ่านด่าน</td>
+<td>เริ่มคำนวณใหม่เมื่อโจทย์เปลี่ยน</td>
+</tr>
+</tbody>
+</table>
+<p>ก่อนเริ่ม ควรตกลงชื่อเสียงว่า <strong>ต่ำ กลาง สูง</strong> และบอกเสียงหลอกว่า <strong>ต่ำติ๊ก กลางติ๊ก สูงติ๊ก</strong> ให้ทุกคนพูดตามลำดับที่ได้ยิน</p>
+<h2 id="_3">เป้าหมายและเงื่อนไขจบเกม</h2>
+<p>กดคำตอบถูกครบ <strong>5 ด่าน</strong> ภายใน <strong>5 นาที</strong> โดยมีสิทธิ์พลาดสะสมได้ไม่เกิน <strong>2 ครั้ง</strong> หากพลาดครั้งที่ 3 หรือเวลาเหลือ 0 เกมจะจบ แต่ละเกมมีสัญลักษณ์ห้ารูปครบหนึ่งครั้ง โดยลำดับสุ่มใหม่เมื่อเริ่มเกม <a href="https://github.com/BankTQMA/Bakuduino/blob/main/src/main.cpp">ดูการจัดด่านในโค้ด</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">ด่าน</th>
+<th style="text-align: right;">จำนวนเสียงจริง</th>
+<th style="text-align: right;">เสียงหลอกที่อาจมี</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0–1</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0–1</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0–2</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0–2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">อ่านหน้าจอ</h2>
+<p>ตัวอย่างภาพข้อความบนจอ:</p>
+<pre><code class="language-text">[รูป] ST2/5    4:12
+**-          X__
+</code></pre>
+<ul>
+<li><strong>รูปมุมซ้ายบน:</strong> กฎที่ต้องใช้ในด่านนี้</li>
+<li><strong>ST2/5:</strong> ด่าน 2 จาก 5</li>
+<li><strong>4:12:</strong> เวลาที่เหลือ</li>
+<li><strong><code>*</code>:</strong> ปุ่มคำตอบที่กดถูกไปแล้ว</li>
+<li><strong><code>-</code>:</strong> คำตอบที่ยังต้องกด</li>
+<li><strong><code>X__</code>:</strong> พลาดแล้ว 1 ครั้ง</li>
+</ul>
+<p>จำนวน <code>*</code> และ <code>-</code> รวมกันเท่ากับจำนวนเสียงจริงของด่าน จึงช่วยตรวจว่าได้ตัดเสียงหลอกครบหรือยัง จออาจไม่อัปเดตตัวเลขเวลาระหว่างเครื่องกำลังเล่นเสียง แต่เวลาจริงยังเดิน <a href="https://github.com/BankTQMA/Bakuduino/blob/main/src/ModuleEye.h">ดูโค้ดแสดงผล</a></p>
+<h2 id="_5">ฟังเสียงและเสียงหลอก</h2>
+<table>
+<thead>
+<tr>
+<th>เสียง</th>
+<th style="text-align: right;">ความถี่ในโปรแกรม</th>
+<th>วิธีเรียก</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ต่ำ</td>
+<td style="text-align: right;">262 Hz</td>
+<td>“ต่ำ”</td>
+</tr>
+<tr>
+<td>กลาง</td>
+<td style="text-align: right;">523 Hz</td>
+<td>“กลาง”</td>
+</tr>
+<tr>
+<td>สูง</td>
+<td style="text-align: right;">1047 Hz</td>
+<td>“สูง”</td>
+</tr>
+</tbody>
+</table>
+<p>เสียงหลักแต่ละตัวเล่นประมาณ 350 มิลลิวินาที ถ้าเสียงใดมี <strong>ติ๊กสั้น ๆ</strong> ตามหลังทันที เสียงตัวนั้นเป็นเสียงหลอก ให้จดไว้เพื่อรายงาน แต่ตัดออกก่อนหาคำตอบ มีเพียงกฎ <strong>เกลียว</strong> ที่ต้องนับจำนวนเสียงหลอกเพื่อเลือกแถวของตาราง <a href="https://github.com/BankTQMA/Bakuduino/blob/main/src/ModuleEye.h">ดูโค้ดเสียง</a></p>
+<p>ตัวอย่าง: “ต่ำ / สูงติ๊ก / กลาง / สูง” เหลือเสียงจริง “ต่ำ / กลาง / สูง”</p>
+<h2 id="_6">เล่นหนึ่งด่านตามลำดับนี้</h2>
+<ol>
+<li>ผู้ควบคุมบอกชื่อสัญลักษณ์และหมายเลขด่าน</li>
+<li>รอฟังให้จบชุด แล้วบอกทุกเสียงตามลำดับ รวมเสียงที่มีติ๊ก</li>
+<li>ผู้เชี่ยวชาญทวนรายการเสียง ตัดเสียงหลอก และนับเสียงจริง</li>
+<li>เปิด <a href="../manual/">กฎของสัญลักษณ์</a> เพื่อหาลำดับปุ่มให้ครบ</li>
+<li>ผู้ควบคุมทวนลำดับปุ่ม แล้วกดทีละปุ่มตามที่ตกลงกัน</li>
+</ol>
+<p><strong>ตัวอย่างการคุย:</strong> ผู้ควบคุม: “เขี้ยว ด่านสาม ได้ยินต่ำ สูงติ๊ก ต่ำ กลาง กลาง” → ผู้เชี่ยวชาญ: “ตัดสูงติ๊ก เหลือต่ำ ต่ำ กลาง กลาง คำตอบคือ 4 1 3 1” → ผู้ควบคุม: “ทวน 4 1 3 1 เริ่มกด”</p>
+<h2 id="_7">เล่นซ้ำกับกดผิดต่างกันอย่างไร</h2>
+<table>
+<thead>
+<tr>
+<th>สิ่งที่เกิดขึ้น</th>
+<th>ผลในเกม</th>
+<th>ผู้เล่นควรทำ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ไม่มีการกดประมาณ 6 วินาที</td>
+<td>เครื่องเล่น <strong>เสียงชุดเดิม</strong> ซ้ำ ล้างความคืบหน้าการกด ไม่เพิ่ม X</td>
+<td>ฟังให้จบ แล้วเริ่มกดคำตอบตั้งแต่ตัวแรก</td>
+</tr>
+<tr>
+<td>กดผิด</td>
+<td>เพิ่ม X และสร้าง <strong>เสียงชุดใหม่</strong> ในด่านและสัญลักษณ์เดิม</td>
+<td>ทิ้งเสียงชุดก่อน ฟังและถอดรหัสใหม่</td>
+</tr>
+<tr>
+<td>กดครบถูกต้อง</td>
+<td>มีเสียงแจ้งผ่าน แล้วเปลี่ยนด่าน</td>
+<td>อ่านรูปใหม่และเริ่มกฎหน้าใหม่</td>
+</tr>
+</tbody>
+</table>
+<p>จุดนี้อยู่ใน <a href="https://github.com/BankTQMA/Bakuduino/blob/main/src/main.cpp">ฟังก์ชันเล่นด่านและลูปหลัก</a> หากไม่แน่ใจว่าได้ยินถูก อย่าเดาเลขปุ่ม ให้รอฟังชุดเดิมซ้ำแล้วเริ่มคำตอบใหม่</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
