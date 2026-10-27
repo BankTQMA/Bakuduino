@@ -1,0 +1,20 @@
+site_name: Bakuduino — Simon Says
+site_description: เกมกู้ระเบิดจำลองบน Arduino เพื่อฝึกการสื่อสารและการทำงานเป็นทีม
+repo_url: https://github.com/BankTQMA/Bakuduino
+
+nav:
+  - รายงานโครงงาน: index.md
+  - การพัฒนาและข้อจำกัด: development.md
+  - สมาชิกและหน้าที่: credits.md
+  - วิธีเล่น: how-to-play.md
+  - เครื่องต้นแบบและวงจร: hardware.md
+  - โปรแกรมและการติดตั้ง:
+      - โครงสร้างโปรแกรม: software.md
+      - ติดตั้งและอัปโหลด: installation.md
+  - คู่มือถอดรหัส:
+      - ภาพรวม: manual/index.md
+      - คลื่น: manual/wave.md
+      - ดวงตา: manual/eye.md
+      - เขี้ยว: manual/fang.md
+      - เกลียว: manual/spiral.md
+      - ดาว: manual/star.md
