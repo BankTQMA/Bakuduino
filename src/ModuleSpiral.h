@@ -1,4 +1,4 @@
-const char* TITLE_1   = " SIGNAL DECODER";
+const char* TITLE_1   = "  SIMON SAYS";
 const char* TITLE_2   = " PRESS ANY KEY";
 const char* WIN_1     = "   DEFUSED!";
 const char* WIN_2     = "SIGNAL RECOVERED";
